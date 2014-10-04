@@ -1,0 +1,24 @@
+Tableview in Swift Xcode 6.01
+
+
+1. create a single view application project
+2. [optional], uncheck the auto layout
+3. drag a tableview into view controller , link it as datasource
+4. add some code below to ViewController.swift
+// ------------
+    let tableData = ["Apple", "Google", "IBM", "Facebook"]
+
+    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        return countElements(tableData)
+    }
+
+
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
+
+        cell.detailTextLabel!.text = tableData[indexPath.row]
+        return cell
+
+    }
+// ------------
+5. run  (command + R)

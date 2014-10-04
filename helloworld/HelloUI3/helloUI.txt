@@ -1,0 +1,16 @@
+Label and TextView in Swift Xcode 6.01
+
+
+1. create a single view application project
+2. [optional], uncheck the auto layout
+3. drag 3 labels, 3 text view and 1 button into storyboard, link 2 textview as outlet and the button as action
+4. add code below to ViewController.swift
+    @IBOutlet weak var num1: UITextField!
+    @IBOutlet weak var num2: UITextField!
+    @IBOutlet weak var num3: UITextField!
+    
+    @IBAction func calSum(sender: AnyObject) {
+        num3.text = String(num1.text.toInt()! + num2.text.toInt()!)
+    }
+// ------------
+5. run  (command + R)
